@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rIL-Ib-HYX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="TjF-Fr-QEs">
+            <objects>
+                <tableViewController id="Cj3-kP-N4X" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lyL-GO-lRV">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="3FK-02-LcE">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DelegationCell" id="RZG-XN-Xjw">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Delegation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMB-uD-Ka3">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="OMB-uD-Ka3" firstAttribute="leading" secondItem="RZG-XN-Xjw" secondAttribute="leading" constant="20" type="default" id="AKK-Fc-9Ke"/>
+                                            <constraint firstItem="OMB-uD-Ka3" firstAttribute="top" secondItem="RZG-XN-Xjw" secondAttribute="top" constant="11" id="EYK-yA-3Ty"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="v5c-gp-QW6" kind="push" id="qN0-Ky-ln1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="KVOCell" id="ARg-3Y-L5c">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="KVO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAB-h3-WG3">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="HAB-h3-WG3" firstAttribute="leading" secondItem="ARg-3Y-L5c" secondAttribute="leading" constant="20" type="default" id="Hfi-fu-6hW"/>
+                                            <constraint firstItem="HAB-h3-WG3" firstAttribute="top" secondItem="ARg-3Y-L5c" secondAttribute="top" constant="11" id="U3i-PJ-nkg"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="Yax-La-5SV" kind="push" id="GAw-IX-tEE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eTQ-M4-vRC">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="NSNotification" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5n-kQ-9JO">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="o5n-kQ-9JO" firstAttribute="leading" secondItem="eTQ-M4-vRC" secondAttribute="leading" constant="20" type="default" id="Abe-6Q-hnk"/>
+                                            <constraint firstItem="o5n-kQ-9JO" firstAttribute="top" secondItem="eTQ-M4-vRC" secondAttribute="top" constant="11" id="SO2-ul-rWp"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="Wba-UC-NUR" kind="push" id="8d8-uY-zx9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="S5j-Y2-CKz">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Callbacks with selectors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsV-gG-nDx">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="nsV-gG-nDx" firstAttribute="leading" secondItem="S5j-Y2-CKz" secondAttribute="leading" constant="20" type="default" id="3aq-pm-EPU"/>
+                                            <constraint firstItem="nsV-gG-nDx" firstAttribute="top" secondItem="S5j-Y2-CKz" secondAttribute="top" constant="11" id="gkh-Ru-ijZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="PB2-ea-UCa" kind="push" id="WFU-Oj-6EL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="WZ9-Ha-SYe">
+                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Callbacks with blocks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vI-ss-Ho0">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="5vI-ss-Ho0" firstAttribute="leading" secondItem="WZ9-Ha-SYe" secondAttribute="leading" constant="20" type="default" id="YlI-Nx-Ov7"/>
+                                            <constraint firstItem="5vI-ss-Ho0" firstAttribute="top" secondItem="WZ9-Ha-SYe" secondAttribute="top" constant="11" id="eg9-T0-vjd"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="WEm-78-P5b" kind="push" id="T1t-Cl-616"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Cj3-kP-N4X" id="uMj-bW-Ra7"/>
+                            <outlet property="delegate" destination="Cj3-kP-N4X" id="NyV-19-trE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2k9-dN-yhR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJg-pZ-pSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="85"/>
+        </scene>
+        <!--View Controller5 - Callbacks with blocks-->
+        <scene sceneID="1p9-d9-8lo">
+            <objects>
+                <viewController id="WEm-78-P5b" customClass="ViewController5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OpZ-Lb-DDG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="pending..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMa-RH-Fr0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="gSR-Jo-ptk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xn8-Mm-4mR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="D6V-3D-WLa"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dMa-RH-Fr0" firstAttribute="top" secondItem="OpZ-Lb-DDG" secondAttribute="top" constant="186" id="KQh-u9-y5y"/>
+                            <constraint firstItem="Xn8-Mm-4mR" firstAttribute="leading" secondItem="dMa-RH-Fr0" secondAttribute="leading" type="default" id="Vix-EI-EBm"/>
+                            <constraint firstItem="Xn8-Mm-4mR" firstAttribute="trailing" secondItem="dMa-RH-Fr0" secondAttribute="trailing" type="default" id="c3f-58-LRu"/>
+                            <constraint firstItem="Xn8-Mm-4mR" firstAttribute="leading" secondItem="OpZ-Lb-DDG" secondAttribute="leading" constant="15" id="lBg-m2-CmX"/>
+                            <constraint firstItem="Xn8-Mm-4mR" firstAttribute="top" secondItem="OpZ-Lb-DDG" secondAttribute="top" constant="70" id="o5n-Mz-aYB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Callbacks with blocks" id="T6s-Ci-w6N"/>
+                    <connections>
+                        <outlet property="progressView" destination="Xn8-Mm-4mR" id="Xq2-cX-u1b"/>
+                        <outlet property="resultLabel" destination="dMa-RH-Fr0" id="Bls-07-B1L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPe-Cd-2Lh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346" y="763"/>
+        </scene>
+        <!--View Controller3 - NSNotification-->
+        <scene sceneID="qgZ-5C-a24">
+            <objects>
+                <viewController id="Wba-UC-NUR" customClass="ViewController3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eRz-l3-6pG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="pending..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMb-C0-HQm">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="n7C-v1-BP6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZa-Tb-swL"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dMb-C0-HQm" firstAttribute="leading" secondItem="eRz-l3-6pG" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OEt-4o-tZ7"/>
+                            <constraint firstItem="dMb-C0-HQm" firstAttribute="top" secondItem="eRz-l3-6pG" secondAttribute="top" constant="204" id="RJC-PI-iXB"/>
+                            <constraint firstItem="cZa-Tb-swL" firstAttribute="top" secondItem="eRz-l3-6pG" secondAttribute="top" constant="88" id="kAf-Jj-xPX"/>
+                            <constraint firstItem="cZa-Tb-swL" firstAttribute="leading" secondItem="eRz-l3-6pG" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lMU-Nv-SNA"/>
+                            <constraint firstAttribute="trailing" secondItem="cZa-Tb-swL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tv7-yv-ZXC"/>
+                            <constraint firstAttribute="trailing" secondItem="dMb-C0-HQm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="up1-pS-rxU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NSNotification" id="ris-uy-WBI"/>
+                    <connections>
+                        <outlet property="progressView" destination="cZa-Tb-swL" id="WUu-1R-yqC"/>
+                        <outlet property="resultLabel" destination="dMb-C0-HQm" id="gVv-97-k2V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OYp-NQ-pw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="402"/>
+        </scene>
+        <!--View Controller4 - Callbacks with selector-->
+        <scene sceneID="Hu6-1E-OZp">
+            <objects>
+                <viewController id="PB2-ea-UCa" customClass="ViewController4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hap-b3-Dqp">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="pending..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnC-iJ-QQ3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="igc-AM-mjy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUk-X6-hcY"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yUk-X6-hcY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Jaa-nZ-3KT"/>
+                            <constraint firstItem="JnC-iJ-QQ3" firstAttribute="leading" secondItem="hap-b3-Dqp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TXa-Oo-WDM"/>
+                            <constraint firstAttribute="trailing" secondItem="JnC-iJ-QQ3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="X9y-kv-9wr"/>
+                            <constraint firstItem="yUk-X6-hcY" firstAttribute="leading" secondItem="hap-b3-Dqp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="g1r-Pj-sx1"/>
+                            <constraint firstItem="JnC-iJ-QQ3" firstAttribute="top" secondItem="hap-b3-Dqp" secondAttribute="top" constant="170" id="vLo-nU-FvV"/>
+                            <constraint firstItem="yUk-X6-hcY" firstAttribute="top" secondItem="hap-b3-Dqp" secondAttribute="top" constant="54" id="yMD-qv-wQ3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Callbacks with selector" id="5u8-g7-NdC"/>
+                    <connections>
+                        <outlet property="progressView" destination="yUk-X6-hcY" id="Ryq-jl-hLh"/>
+                        <outlet property="resultLabel" destination="JnC-iJ-QQ3" id="0eL-9I-YCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCM-Id-nnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="398"/>
+        </scene>
+        <!--View Controller1 - Delegation-->
+        <scene sceneID="Joj-cu-17r">
+            <objects>
+                <viewController id="v5c-gp-QW6" customClass="UIViewController1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7Q-HQ-I7Q">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="pending..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FD-Kk-G1O">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="R7o-lE-Bhl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYO-S8-jxJ"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eYO-S8-jxJ" firstAttribute="top" secondItem="q7Q-HQ-I7Q" secondAttribute="top" constant="74" id="FO9-gj-vpg"/>
+                            <constraint firstItem="4FD-Kk-G1O" firstAttribute="top" secondItem="q7Q-HQ-I7Q" secondAttribute="top" constant="191" id="JeO-uN-0Pu"/>
+                            <constraint firstAttribute="trailing" secondItem="eYO-S8-jxJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YUO-1t-Pvb"/>
+                            <constraint firstItem="4FD-Kk-G1O" firstAttribute="leading" secondItem="q7Q-HQ-I7Q" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a49-Ld-UWT"/>
+                            <constraint firstAttribute="trailing" secondItem="4FD-Kk-G1O" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ffi-30-X36"/>
+                            <constraint firstItem="eYO-S8-jxJ" firstAttribute="leading" secondItem="q7Q-HQ-I7Q" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jfw-sU-VGI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Delegation" id="wGV-iK-gpg"/>
+                    <connections>
+                        <outlet property="progressView" destination="eYO-S8-jxJ" id="Sg4-ca-rZy"/>
+                        <outlet property="resultLabel" destination="4FD-Kk-G1O" id="2P8-UZ-cc9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhu-2B-k3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="-262"/>
+        </scene>
+        <!--View Controller2 - KVO-->
+        <scene sceneID="wAk-gl-Eda">
+            <objects>
+                <viewController id="Yax-La-5SV" customClass="ViewController2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N9r-L6-htf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="pending..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttY-Ty-r5p">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="Tpf-0K-j1S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A28-Wo-tpY"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ttY-Ty-r5p" firstAttribute="top" secondItem="N9r-L6-htf" secondAttribute="top" constant="179" id="B1W-9H-riZ"/>
+                            <constraint firstItem="A28-Wo-tpY" firstAttribute="leading" secondItem="N9r-L6-htf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Mtf-Ao-0AH"/>
+                            <constraint firstAttribute="trailing" secondItem="ttY-Ty-r5p" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VY1-4u-L5K"/>
+                            <constraint firstItem="ttY-Ty-r5p" firstAttribute="leading" secondItem="N9r-L6-htf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="oWK-ii-wmy"/>
+                            <constraint firstAttribute="trailing" secondItem="A28-Wo-tpY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vOp-PX-kOV"/>
+                            <constraint firstItem="A28-Wo-tpY" firstAttribute="top" secondItem="N9r-L6-htf" secondAttribute="top" constant="62" id="wkQ-2a-fHS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="KVO" id="vEY-hv-a8D"/>
+                    <connections>
+                        <outlet property="progressView" destination="A28-Wo-tpY" id="2hj-kS-Zc6"/>
+                        <outlet property="resultLabel" destination="ttY-Ty-r5p" id="AV9-Ja-I8e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmK-LH-6bK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="-262"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fSJ-l2-8J1">
+            <objects>
+                <navigationController id="rIL-Ib-HYX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bnr-X5-r1I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cj3-kP-N4X" kind="relationship" relationship="rootViewController" id="5Dd-9n-MoW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXl-uw-wQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-319" y="85"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIViewController1" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController1.h"/>
+            <relationships>
+                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController2" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController2.h"/>
+            <relationships>
+                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController3" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController3.h"/>
+            <relationships>
+                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController4" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController4.h"/>
+            <relationships>
+                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController5" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController5.h"/>
+            <relationships>
+                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="resultLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
