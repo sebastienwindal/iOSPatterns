@@ -7,6 +7,7 @@
 //
 
 #import "BigCalculator3.h"
+#import "NotificationDictKeys.h"
 
 @implementation BigCalculator3
 {
@@ -24,19 +25,29 @@
 -(void) doBackgroundWork
 {
     [NSThread sleepForTimeInterval:1.0]; // sleep for one second
-    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorProgressChangeNotification object:@(0.25) userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorProgressChangeNotification
+                                                        object:self
+                                                      userInfo:@{kCalProgressKey: @(0.25)}];
     
     [NSThread sleepForTimeInterval:1.0]; // sleep for one second
-    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorProgressChangeNotification object:@(0.5) userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorProgressChangeNotification
+                                                        object:self
+                                                      userInfo:@{kCalProgressKey: @(0.5)}];
     
     [NSThread sleepForTimeInterval:1.0]; // sleep for one second
-    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorProgressChangeNotification object:@(0.75) userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorProgressChangeNotification
+                                                        object:self
+                                                      userInfo:@{kCalProgressKey: @(0.75)}];
     
     [NSThread sleepForTimeInterval:1.0]; // sleep for one second
-    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorProgressChangeNotification object:@(0.1) userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorProgressChangeNotification
+                                                        object:self
+                                                      userInfo:@{kCalProgressKey: @(1.0)}];
     
     // we are done publish the result of our calculation...
-    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorCalculationCompleteNotification object:@(_number1 / _number2) userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kBigCalculatorCalculationCompleteNotification
+                                                        object:self
+                                                      userInfo:@{kCalResultKey: @(_number1 / _number2)}];
 
 }
 

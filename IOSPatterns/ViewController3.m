@@ -8,6 +8,7 @@
 
 #import "ViewController3.h"
 #import "BigCalculator3.h"
+#import "NotificationDictKeys.h"
 
 @interface ViewController3 ()
 
@@ -45,7 +46,7 @@
 
 -(void) calculatorProgressChanged:(NSNotification *)notification
 {
-    float value = [notification.object floatValue];
+    float value = [notification.userInfo[kCalProgressKey] floatValue];
     // update the UI on the Main thread!
     dispatch_async(dispatch_get_main_queue(), ^{
         self.progressView.progress = value;
@@ -54,7 +55,7 @@
 
 -(void) calculatorCompletedCalculation:(NSNotification *)notification
 {
-    NSString *str = [NSString stringWithFormat:@"%f", [notification.object floatValue]];
+    NSString *str = [NSString stringWithFormat:@"%f", [notification.userInfo[kCalResultKey] floatValue]];
     // update the UI on the Main thread!
     dispatch_async(dispatch_get_main_queue(), ^{
         self.progressView.progress = 1.0f;

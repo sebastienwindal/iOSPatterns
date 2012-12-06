@@ -9,9 +9,6 @@
 #import <Foundation/Foundation.h>
 
 
-static NSString *kBigCalculatorProgressChangeNotification = @"kBigCalculatorProgressChangeNotification";
-static NSString *kBigCalculatorCalculationCompleteNotification = @"kBigCalculatorCalculationCompleteNotification";
-
 @interface BigCalculator3 : NSObject
 
 -(void) startBigCalculationWithNumber:(float)number1 andNumber:(float)number2;

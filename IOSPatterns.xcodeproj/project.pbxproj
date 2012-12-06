@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84FC4E871670D7BC00BE61EA /* NotificationDictKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationDictKeys.h; sourceTree = "<group>"; };
 		BE687CD21666ECC500F84235 /* IOSPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE687CD61666ECC500F84235 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BE687CD81666ECC500F84235 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -219,6 +220,7 @@
 				BEAC6E6F1667151E002E465D /* ViewController3.m */,
 				BEAC6E7116671532002E465D /* BigCalculator3.h */,
 				BEAC6E7216671532002E465D /* BigCalculator3.m */,
+				84FC4E871670D7BC00BE61EA /* NotificationDictKeys.h */,
 			);
 			name = "3 - NSNotification";
 			sourceTree = "<group>";
