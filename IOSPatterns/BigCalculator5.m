@@ -78,16 +78,19 @@
         completionHandler handler = obj;
         handler(pow(_number1, _number2));
     }];
+    
 }
 
 -(void) addCalculationProgressHandler:(progressHandler)handler
 {
-    [self.progressHandlers addObject:handler];
+    // always copy a block when adding it to a collection!!!
+    [self.progressHandlers addObject:[handler copy]];
 }
 
 -(void) addCalculationResultHandler:(completionHandler)handler
 {
-    [self.completionHandlers addObject:handler];
+    // always copy a block when adding it to a collection!!!
+    [self.completionHandlers addObject:[handler copy]];
 }
 
 
