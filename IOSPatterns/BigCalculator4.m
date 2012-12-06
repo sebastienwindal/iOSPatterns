@@ -41,6 +41,7 @@
     _number1 = number1;
     _number2 = number2;
     [self performSelectorInBackground:@selector(doBackgroundWork) withObject:nil];
+    
 }
 
 -(void) doBackgroundWork
