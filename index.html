@@ -37,7 +37,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>iOSPatterns</h1>
+					<h1>iOS Patterns</h1>
 					<h3>Basic UI pattern in iOS</h3>
 					<p>
 						<small>Created by <a href="http://github.com/sebastienwindal">Sebastien Windal</a></small>
@@ -45,66 +45,123 @@
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+					<h2>MVC</h2>
+					
+					<p class="fragment">iOS natural UI architecture is MVC (Model, View, Controller).</p>
+					<p class="fragment">An app is structured in 3 classes of components:</p>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+					<ul>
+						<li class="fragment"><em>models</em> (persistent data, backend service, business rules, etc...)</li>
+						<li class="fragment"><em>views</em>  (UI elements user sees and interacts with)</li>
+						<li class="fragment"><em>view controllers</em> (tie everything together)</li>
+					</ul>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+					<h2>We need</h2>
+
+					<ul>
+						<li class="fragment">models &lt;-&gt; View controllers communication
+						<li class="fragment">View controllers &lt;-&gt; views communication
+						<li class="fragment">View Controllers &lt;-&gt; View Controllers communication
+						<li  class="fragment">models &lt;-&gt; models communication
+					</ul>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
+
+					<h2>We Want</h2>
+
+					<ul>
+						<li class="fragment">Lose coopling</li>
+						<li class="fragment">Separation of Concerns</li>
+						<li class="fragment">Reusability</li>
+						<li class="fragment">Maintainability</li>
+						<li class="fragment">To do the RIGHT thing</li>
+					</ul>
+
+				</section>
+
+				<section data-markdown>
+					## We Want
+
+					![Standford Slide](StanfordSlide1.png)
+				</section>
+				<section data-markdown>
+					## And
+
+					![Standford Slide](StanfordSlide2.png)
+				</section>
+
+				<section data-markdown>
+					## BUT NOT
+
+					![Standford Slide](StanfordSlide3.png)
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+					<h2>At our disposal</h2>
+
+					<ul>
+						<li class="fragment roll-in">Delegation</li>
+						<li class="fragment roll-in">NSNotification</li>
+						<li class="fragment roll-in">Key Value Observing</li>
+						<li class="fragment roll-in">Actions/Selectors using NSInvocation</li>
+						<li class="fragment roll-in">Obj-C blocks</li>
+					</ul>
 				</section>
 
+				<section data-background="#200000" data-background-transition="slide">
+					<section data-markdown>
+						## Delegation
+					</section>
+					<section>
+						<h3>Shared Protocol between 2 objects</h3>
+
+<pre><code data-trim>
+@protocol BigCalculatorDelegate&lt;NSObject&gt;
+
+@required
+-(void) bigCalculator:(BigCalculator1 *)calculator 
+      didFinishOperationWithResult:(float)result;
+
+@optional
+-(void) bigCalculator:(BigCalculator1 *)calculator 
+   madeProgressOnCalculation:(float)percentProgress;
+
+@end
+</code></pre>
+					<p>Defines method the delegate must implement.</p>
+
+					</section>
+
+					<section>
+						<h3>A property to call the delegate</h3>
+
+<pre><code data-trim>
+@property (nonatomic, weak) id&lt;BigCalculatorDelegate&gt; delegate;
+</code></pre>
+					<p>When the object needs somthing from its delegate:</p>
+
+<pre><code data-trim>
+[self.delegate bigCalculator:self didFinishOperationWithResult:1.618];
+</code></pre>
+
+					</section>
+
+
+
+				</section>
+
+				<section data-background="#002000" data-background-transition="slide">
+					<section data-markdown>
+						## Key Value Observing
+					</section>
+					<section>
+						sdfsdf
+					</section>
+				</section>
 				<section>
 					<h2>Works in Mobile Safari</h2>
 					<p>
