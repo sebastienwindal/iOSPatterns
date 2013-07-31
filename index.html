@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>iOS Patterns - Standard iOS patterns</title>
 
 		<meta name="description" content="iOS basic UI patterns presentation">
 		<meta name="author" content="Sebastien Windal">
@@ -120,39 +120,114 @@
 						## Delegation
 					</section>
 					<section>
-						<h3>Shared Protocol between 2 objects</h3>
+						<p>
+						A delegate is an object that acts on behalf of, or in coordination with, another
+						object when that object encounters an event in a program.
+						<p>
+
+						<ul>
+							<li>
+								The only thing the notifier object knows about its delegate is that is implements
+								a <em>shared protocol</em>.
+							</li>
+							<li>
+								The notifier typically interacts with its delegate via a <em>(weak) property</em>.
+							</li>
+							<li>
+								The delegate object usually <em>owns the notifier</em> object (it hols a strong reference to
+								it, it even created it).
+							</li>
+						</ul>
+					</section>
+					<section>
+
+						<h3>Example of a shared protocol between the delegate and the delegator</h3>
 
 <pre><code data-trim>
-@protocol BigCalculatorDelegate&lt;NSObject&gt;
+@protocol MyObjectDelegate&lt;NSObject&gt;
 
 @required
--(void) bigCalculator:(BigCalculator1 *)calculator 
-      didFinishOperationWithResult:(float)result;
+// object notifies delegate of an event:
+-(void) myObject:(MyObject *)myObject didFinishSomething:(int)result;
+// object requires information from its delegate:
+-(BOOL) myObject:(MyObject *)myObject pleaseTellMeIf:(int)blah;
 
 @optional
--(void) bigCalculator:(BigCalculator1 *)calculator 
-   madeProgressOnCalculation:(float)percentProgress;
+// object notifies delegate of another (optional) event:
+-(void) myObject:(MyObject *)myObject madeProgress:(float) percents;
 
 @end
 </code></pre>
-					<p>Defines method the delegate must implement.</p>
-
 					</section>
-
 					<section>
-						<h3>A property to call the delegate</h3>
+						<h3>The notifying object:</h3>
 
 <pre><code data-trim>
-@property (nonatomic, weak) id&lt;BigCalculatorDelegate&gt; delegate;
+@interface MyObject
+
+-(void) doSomeTask;
+
+@property (nonatomic, weak) id&lt;MyObjectDelegate&gt; delegate;
+
+@end
 </code></pre>
-					<p>When the object needs somthing from its delegate:</p>
 
 <pre><code data-trim>
-[self.delegate bigCalculator:self didFinishOperationWithResult:1.618];
+@implementation MyObject
+
+-(void) doSomeTask
+{
+	// compute stuff ...
+	//...
+
+	if ([self.delegate respondsToSelector:
+					@selector(myObject:MadeProgress:)]) {
+		// half way done
+		[self.delegate myObject:self madeProgress:0.5]; 
+	}
+
+	// do work
+	// ...
+
+	[self.delegate myObject:self didFinishSomething:123];
+}
+@end
 </code></pre>
 
 					</section>
+					<section>
+						<h3>The delegate</h3>
+<pre><code data-trim>
+@interface ObjectBid&lt;MyObjectDelegate&gt;
 
+@property (nonatomic, strong) MyObject *myObject;
+
+@end
+
+@implementation ObjectB
+
+-(void)viewDidLoad
+{
+	self.myObject = [[MyObject alloc] init];
+	self.myObject.delegate = self;
+	[self.myObject doSomeTask];
+}
+
+-(void) myObject:(MyObject *)myObject didFinishSomething:(int)result
+{
+	// take action.
+}
+
+// object requires information from its delegate:
+-(BOOL) myObject:(MyObject *)myObject pleaseTellMeIf:(int)blah
+{
+	return YES;
+}
+@end
+</code></pre>
+
+
+					</section>
 
 
 				</section>
